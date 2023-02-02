@@ -33,9 +33,9 @@ generateButton.addEventListener(
                     this.classList.toggle("clickcolor");
                 }
             )
-            squarebox(square);
+            
         }
-      
+        squarebox(square);
         return;
     }
 
@@ -45,16 +45,19 @@ generateButton.addEventListener(
 
 //PC GENERA 16 NUMERI NEL RANGE DELLA DIFFICOLTA SCELTA(nell'array non possono esserci numeri uguali)
 let bomb=[];
-function squarebox(square){
+//function squarebox(square){
 for (let i=0;i<16;i++){
     const randomNumber=parseInt(Math.floor(Math.random()*100));
     console.log(randomNumber[i]);
     bomb.push(randomNumber);
     
-}
-   square.append(bomb);
+    if(!bomb.includes(randomNumber)){
+        bomb.push(randomNumber);
+    }
+
 }
 
+console.log(bomb);
 
 //INSERIRE QUESTI NUMERI ALL'INTERNO DELLE CELLE
 
