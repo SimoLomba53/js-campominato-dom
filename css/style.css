@@ -1,0 +1,47 @@
+body{
+    background-color:#E7E5E2;
+}
+
+#genera{
+    margin-top:5px;
+    margin-bottom:5px;
+    padding:10px;
+    background-color: #E7E5E2;
+    color:#191919;
+    border-radius: 10px;
+}
+
+.buttonconteiner{
+    background-color: #191919;
+    width:100%;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+}
+
+#grid{
+    display: flex;
+    flex-wrap: wrap;
+    gap:15px;
+    margin:auto;
+    justify-content: center;
+    max-width: 1200px;
+    margin-top: 20px;
+
+    
+
+}
+
+.size{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width:96px;
+    height:96px;
+    background-color:white;
+    border:1px solid black;
+}
+
+.clickcolor{
+    background-color: aqua;
+}
