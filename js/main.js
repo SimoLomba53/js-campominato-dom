@@ -33,7 +33,7 @@ generateButton.addEventListener(
                 function(click){
                     console.log(this.innerHTML);
                     for(let i=0;i<bomb.length;i++){
-                        if(i==this.innerHTML){
+                        if(i==parseInt(square)){
                             square.classList.toggle("redbomb")
                         }else{
                             square.classList.toggle("clickcolor")
