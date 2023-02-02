@@ -35,7 +35,7 @@ generateButton.addEventListener(
             )
             
         }
-        squarebox(square);
+        console.log(square);
         return;
     }
 
@@ -58,11 +58,13 @@ for (let i=0;i<16;i++){
 }
 
 console.log(bomb);
-
-//INSERIRE QUESTI NUMERI ALL'INTERNO DELLE CELLE
-
-
-//FAR SI CHE SE VIENE CLICCATA UNA CELLA CON UNO DI QUESTI NUMERI SI COLORA DI ROSSO E LA PARTITA TERMINA
-//ALTRIMENTI DI AZZURRO E LA PARTITA CONTINUA
+//CONFRONTA I BOMB CON I SQUARE
+//SE SONO UGUALI E'UNA BOMBA,LA CELLA SI COLORA DI ROSSO,SI FERMA LA PARTITA
+//SE NON LO SONO CONTINUA A GIOCARE
+if(bomb.innerHTML==square.innerHTML){
+   this.classList.remove("clickcolor");
+   this.classList.add("redbomb");
+   alert("GAME OVER")
+}
 //COMUNICARE QUANTE CELLE SONO STATE CLICCATE PRIMA DEL TERMINE DELLA PARTITA
 
