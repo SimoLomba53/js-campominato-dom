@@ -10,7 +10,7 @@ console.log(generateButton);
 //COLLEGA JAVASCRIPT AL DIV HTML
 const grid=document.getElementById("grid");
 //console.log(grid);
-
+let bomb=[1,5,9,26,22,11,14,3,4,7,8];
 //DIAMO FUNZIONE AL BUTTON
 generateButton.addEventListener(
     'click',
@@ -25,17 +25,22 @@ generateButton.addEventListener(
             square.classList.add("size");
             // LO INTRODUCO NEL GRID
             grid.append(square);
+            
             //FACCIO SI CHE EMETTA IL N IL CONSOLE QUANDO VIENE CLICKATO
             square.addEventListener(
                 'click',
                 function(click){
                     console.log(this.innerHTML);
-                    this.classList.toggle("clickcolor");
+                    if(square==bomb[i]){
+                    this.classList.toggle("redbomb");
+                    }else{
+                    this.classList.toggle("clickcolor")
+                    }
                 }
             )
-            
+            console.log(square);
         }
-        console.log(square);
+        
         return;
     }
 
@@ -44,27 +49,23 @@ generateButton.addEventListener(
 
 
 //PC GENERA 16 NUMERI NEL RANGE DELLA DIFFICOLTA SCELTA(nell'array non possono esserci numeri uguali)
-let bomb=[];
+//let bomb=[];
 //function squarebox(square){
-for (let i=0;i<16;i++){
-    const randomNumber=parseInt(Math.floor(Math.random()*100));
-    console.log(randomNumber[i]);
-    bomb.push(randomNumber);
+//for (let i=0;i<16;i++){
+    //const randomNumber=parseInt(Math.floor(Math.random()*100));
+    //console.log(randomNumber[i]);
+    //bomb.push(randomNumber);
     
-    if(!bomb.includes(randomNumber)){
-        bomb.push(randomNumber);
-    }
+    //if(!bomb.includes(randomNumber)){
+        //bomb.push(randomNumber);
+   // }
 
-}
+//}
 
-console.log(bomb);
+//console.log(bomb);
 //CONFRONTA I BOMB CON I SQUARE
 //SE SONO UGUALI E'UNA BOMBA,LA CELLA SI COLORA DI ROSSO,SI FERMA LA PARTITA
 //SE NON LO SONO CONTINUA A GIOCARE
-if(bomb[i]==square[i]){
-   this.classList.remove("clickcolor");
-   this.classList.add("redbomb");
-   alert("GAME OVER")
-}
+
 //COMUNICARE QUANTE CELLE SONO STATE CLICCATE PRIMA DEL TERMINE DELLA PARTITA
 
