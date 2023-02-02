@@ -61,7 +61,7 @@ console.log(bomb);
 //CONFRONTA I BOMB CON I SQUARE
 //SE SONO UGUALI E'UNA BOMBA,LA CELLA SI COLORA DI ROSSO,SI FERMA LA PARTITA
 //SE NON LO SONO CONTINUA A GIOCARE
-if(bomb.innerHTML==square.innerHTML){
+if(bomb[i]==square[i]){
    this.classList.remove("clickcolor");
    this.classList.add("redbomb");
    alert("GAME OVER")
