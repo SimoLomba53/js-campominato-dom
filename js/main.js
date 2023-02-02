@@ -11,6 +11,7 @@ console.log(generateButton);
 const grid=document.getElementById("grid");
 //console.log(grid);
 let bomb=[1,5,9,26,22,11,14,3,4,7,8];
+console.log(bomb);
 //DIAMO FUNZIONE AL BUTTON
 generateButton.addEventListener(
     'click',
@@ -20,7 +21,7 @@ generateButton.addEventListener(
             //CREO IL QUADRATO DA INSERIRE
             const square = document.createElement("div");
             //ASSEGNO IL NUMERO
-            square.innerHTML = i + 1;
+            square.innerHTML=i + 1;
             //GLI DO LA CLASSE
             square.classList.add("size");
             // LO INTRODUCO NEL GRID
@@ -31,10 +32,12 @@ generateButton.addEventListener(
                 'click',
                 function(click){
                     console.log(this.innerHTML);
-                    if(square==bomb[i]){
-                    this.classList.toggle("redbomb");
-                    }else{
-                    this.classList.toggle("clickcolor")
+                    for(let i=0;i<bomb.length;i++){
+                        if(i==this.innerHTML){
+                            square.classList.toggle("redbomb")
+                        }else{
+                            square.classList.toggle("clickcolor")
+                        }
                     }
                 }
             )
