@@ -39,5 +39,17 @@ generateButton.addEventListener(
     
      
 )
+//PC GENERA 16 NUMERI NEL RANGE DELLA DIFFICOLTA SCELTA(nell'array non possono esserci numeri uguali)
+let bomb=[];
 
+for (let i=0;i<16;i++){
+    const randomNumber=parseInt(Math.floor(Math.random()*100));
+    console.log(randomNumber[i]);
+    bomb.push(randomNumber);
+}
+
+//INSERIRE QUESTI NUMERI ALL'INTERNO DELLE CELLE
+//FAR SI CHE SE VIENE CLICCATA UNA CELLA CON UNO DI QUESTI NUMERI SI COLORA DI ROSSO E LA PARTITA TERMINA
+//ALTRIMENTI DI AZZURRO E LA PARTITA CONTINUA
+//COMUNICARE QUANTE CELLE SONO STATE CLICCATE PRIMA DEL TERMINE DELLA PARTITA
 
